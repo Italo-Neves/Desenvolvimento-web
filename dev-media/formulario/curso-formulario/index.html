@@ -8,13 +8,89 @@
 
   <body>
 	<form method="GET" action="">
-		<label>E-mail</label>
-		<input type="email" />
-
-		<label>Senha:</label>
-		<input type="password"/>
-
+		<fieldset>	
+			<legend>Conta:</legend>	
+			<div>	
+				<label>E-mail</label>
+				<input type="email" required />
+			</div>
+			<div>
+				<label>Senha:</label>
+				<input type="password" required />
+			</div>
+		</fieldset>	
+		
+        <fieldset>
+           <legend>Dado Pessoais</legend>
+			<div>
+				<label>Nome:</label>
+				<input type="text" placeholder="Ex: Italo" required />
+			</div>
+			<div>
+				<label>Telefone:<label>
+				<input type="text" placeholder="(21) 99999-9999" required />				
+			</div>
+			<div>
+				<label>Rua:</label>
+				<input type="text" required />
+			</div>
+					
+			<div>
+				<label>Complemento:</label>
+				<input type="text" required />
+			</div>	
+			<div>
+				<label>Cidade:</label>
+				<input type="text" required >
+			</div>
+			<div>
+				<label>Sexo:</label>
+				<label>Masculino</label>
+				<input type="radio" value="masculino" name="sexo" checked/>
+				<label>Feminino</label>
+				<input type="radio" value="feminino" name="sexo"/>
+			</div>
+            <div>
+                <label>Foto de perfil</label>
+                <input type="file">
+            </div>
+ 
+		</fieldset>	
+        
+        <fieldset>
+           <legend>Endereço</legend>
+           <div>
+               <label>Data:</label>
+               <input type="date"/>
+           </div>
+           <div>
+               <label>Numero:</label>	
+               <input type="number" min-"1" max="9999"/>
+           </div>
+           <div>
+               <label>Estado:</label>
+               <select>
+                   <option value="RG">Rio de janeiro</option>
+                   <option value="SP">São Paulo</option>
+                   <option value="DF">Distrito Federal</option>
+               </select>
+           </div>
+ 
+         </fieldset>
+        
+         <fieldset>
+           <legend>Anuncio</legend>
+           <div>
+               <label>Como conheceu o Hello Pizza?</label>
+               <textarea maxlength="256" placeholder="Explique para a gente como você conheceu o nosso site"></textarea>
+           </div>
+           <div>
+               <label>Desejo receber ofertas por email</label>
+               <input type="checkbox" checked/>
+           </div>
+           </fieldset>
+           
+           <input type="submit" value="Enviar">
 	</form>
   </body>
 </html>
-
